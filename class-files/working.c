@@ -1,11 +1,21 @@
 #include <stdio.h> 
-int main() {
-    int numbers[5] = {10, 20, 30, 40, 50};
-    printf("Accessing elements within the valid range:\n");
-    for (int i = 0; i < 5; i++)
+#include <stdint.h> 
+#include <inttypes.h>
+
+uint64_t factorial(uint32_t n)
+{
+    // Base case: factorial of 0 or 1 is 1
+    if (n == 0 || n == 1)
     {
-        printf("numbers[%d] = %d\n", i, numbers[i]);
+        return 1;
     }
-    printf("\nAccessing elements out of the valid range:\n");
-    printf("numbers[6] = %d\n", numbers[6]); // Accessing element outside the valid range
+    // Recursive case: factorial of n is n multiplied by factorial of (n -1)
+    return n * factorial(n - 1);
+}
+
+int main()
+{
+    uint32_t num = 5;
+    uint64_t result = factorial(num);
+    printf("Factorial of %" PRIu32 " is %" PRIu64 "\n", num, result);
 }

@@ -2,8 +2,6 @@
 #include <math.h>
 #include <stdbool.h>
 
-#define MAX_ACCOUNTS 10
-
 int main()
 {
     int choice;
@@ -18,7 +16,7 @@ int main()
 
     while (1) {
         printf("Enter the number of accounts: ");
-
+        
         if (scanf("%d", &num_accounts) == 1) {
             if (num_accounts < 0) {
                 printf("Error: Invalid number of accounts entered. Enter an integer greater than 0.\n");
@@ -103,9 +101,8 @@ int main()
             }
         }
         
-    if (choice == 0) {
-        break;
-    }
-        
+        if (choice == 0) {
+            break;
+        }
     }
 }

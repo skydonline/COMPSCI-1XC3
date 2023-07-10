@@ -19,7 +19,7 @@ int main()
     {
 
 
-        printf("Select an operation:\n 1. Deposit\n 2. Withdraw\n 3. Check Balance\n 4. Future Balance Using Interest Rate\n 0. exit\n");
+        printf("Select an operation:\n 1. Deposit\n 2. Withdraw\n 3. Check Balance\n 4. Future Balance Using Interest Rate\n 0. exit\nEnter operation number: ");
         scanf("%d", &choice);
 
 

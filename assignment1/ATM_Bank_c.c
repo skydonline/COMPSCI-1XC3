@@ -61,7 +61,7 @@ int main()
 
 
     while (1) {
-        printf("Select an operation:\n 1. Deposit\n 2. Withdraw\n 3. Check Balance\n 4. Future Balance Using Interest Rate\n 5. Switch Account\n 6. Display All Balances\n 0. exit\n");
+        printf("Select an operation:\n 1. Deposit\n 2. Withdraw\n 3. Check Balance\n 4. Future Balance Using Interest Rate\n 5. Switch Account\n 6. Display All Balances\n 0. exit\nEnter operation number: ");
         
         if (scanf("%d", &choice) == 1) {
             if (0 <= choice && choice <= 6) {

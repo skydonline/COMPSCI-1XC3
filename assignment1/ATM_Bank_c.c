@@ -17,7 +17,7 @@ int main()
     while (1) {
         printf("Enter the number of accounts: ");
 
-        if (scanf("%d", &num_accounts) == 1 && num_accounts > 0) {
+        if (scanf("%d", &num_accounts) == 1 && num_accounts > 0 && num_accounts <= 10) {
                 break;
         } 
 
@@ -39,7 +39,7 @@ int main()
         } 
 
         else {
-            printf("Error: Invalid input. Enter a valid interest rate, between 0 and 100, without any symbols.\n");
+            printf("Error: Invalid input. Enter a valid interest rate between 0 and 100, without any symbols.\n");
             while (getchar() != '\n') {
                 continue;
             }
@@ -81,7 +81,7 @@ int main()
             }
 
         } else {
-            printf("Error: Invalid input format. Enter a number between 0 and 6 without any symbols.\n");
+            printf("Error: Invalid input. Enter a number between 0 and 6, without any symbols.\n");
             while (getchar() != '\n') {
                 continue;
             }

@@ -45,7 +45,7 @@ int main()
     clearInputBuffer();
 
 
-    // Creating array for account balances
+    // Creating the array for account balances
     float balances[num_accounts-1];
     for (int i = 0; i < num_accounts; i++) {
         while (1) {
@@ -60,10 +60,11 @@ int main()
                 clearInputBuffer();
             }
         }
+        clearInputBuffer();
     }
 
-    clearInputBuffer();
 
+    // While loops prompts user for the account they want to enter
     while (1) {
         // Checks if the input is a valid account number
         printf("Enter the account number you would like to enter: ");

@@ -133,6 +133,14 @@ int main()
                     }
                 }
                 break;
+            
+            // Switches user account
+            case 5:
+                break;
+
+            // Displays all user balances
+            case 6:
+                break;
 
             case 0:
                 break;
@@ -150,10 +158,10 @@ int main()
         }
 
         // Clear input buffer incase user inputs invalid input that is left in input buffer
-        // Note: if the user just checked the balance, there will be nothing in the input buffer
+        // Note: if the user just checked the balance(s), there will be nothing in the input buffer
         // Therefore, it is not necessary to clear the input buffer, and this needs to be checked
         // Otherwise the function will not continue
-        if (choice != 3) {
+        if (choice != 3 || choice != 6) {
             clearInputBuffer();
         }
     }

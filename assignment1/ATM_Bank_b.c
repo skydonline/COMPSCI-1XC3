@@ -33,7 +33,7 @@ int main()
             break;
 
         case 2:
-            printf("Enter the amount you would like to deposit: ");
+            printf("Enter the amount you would like to withdraw: ");
             scanf("%f", &withdraw);
             balance -= withdraw;
             break;

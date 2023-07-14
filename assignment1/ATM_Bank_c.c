@@ -18,8 +18,8 @@ int main()
 {
     // Create variables
     int choice;
-    float deposit;
-    float withdraw;
+    double deposit;
+    double withdraw;
     float interest_rate;
     int years;
     int num_accounts;
@@ -43,12 +43,12 @@ int main()
 
 
     // Creating the array for account balances
-    float balances[num_accounts-1];
+    double balances[num_accounts-1];
     for (int i = 0; i < num_accounts; i++) {
         while (1) {
             // Checks if the input is a float and is greater than 0
             printf("Enter the balance for account %d: $", i);
-            if (scanf("%f", &balances[i]) == 1 && balances[i] >= 0) {
+            if (scanf("%lf", &balances[i]) == 1 && balances[i] >= 0) {
                 break;
             } 
             // Prints error message and clears input buffer
@@ -108,7 +108,7 @@ int main()
                     while (1) {
                         printf("Enter the amount you would like to deposit: ");
                         // Checks if input is a valid deposit
-                        if (scanf("%f", &deposit) == 1 && deposit >= 0) {
+                        if (scanf("%lf", &deposit) == 1 && deposit >= 0) {
                             balances[current_account] += deposit;
                             break;
                         } 
@@ -125,7 +125,7 @@ int main()
                     while (1) {
                         printf("Enter the amount you would like to withdraw: ");
                         // Checks if input is a valid withdrawl
-                        if (scanf("%f", &withdraw) == 1 && withdraw >= 0 && withdraw <= balances[current_account]) {
+                        if (scanf("%lf", &withdraw) == 1 && withdraw >= 0 && withdraw <= balances[current_account]) {
                             balances[current_account] -= withdraw;
                             break;
                         }

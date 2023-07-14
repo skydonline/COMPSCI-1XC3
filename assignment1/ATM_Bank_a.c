@@ -4,9 +4,9 @@ int main()
 {
     // Create variables
     int choice;
-    float balance;
-    float deposit;
-    float withdraw;
+    double balance;
+    double deposit;
+    double withdraw;
 
 
     // While loop breaks when user enters 0
@@ -22,14 +22,14 @@ int main()
         // Deposit
         case 1:
             printf("Enter the amount you would like to deposit: $");
-            scanf("%f", &deposit);
+            scanf("%lf", &deposit);
             balance += deposit;
             break;
 
         // Withdraw
         case 2:
             printf("Enter the amount you would like to withdraw: $");
-            scanf("%f", &withdraw);
+            scanf("%lf", &withdraw);
             
             // Checks is user is trying to withdraw more than their balance
             if (withdraw > balance) {

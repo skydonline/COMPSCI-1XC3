@@ -14,7 +14,7 @@ void readWords(char *filename, char **words[], int *numWords) {
     file = fopen(filename, "r");
     if (file == NULL) {
         printf("Error opening the file '%s'\n", filename);
-        exit;
+        exit(1);
     }
 
     char buffer[MAX_WORD_LENGTH];

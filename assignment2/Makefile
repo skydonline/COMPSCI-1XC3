@@ -1,10 +1,12 @@
 CC = gcc
-CFLAGS = -g -Wall
+CFLAGS = -g -Wall -Wextra
+EXECUTABLE = main
+CFILES = main.c readFile_randWord.c functions.c
 
-all: main
+all: $(EXECUTABLE)
 
-main: main.c readFile_randWord.c functions.c
-    $(CC) $(CFLAGS) main.c readFile_randWord.c functions.c -o main -lm
+$(EXECUTABLE): $(CFILES)
+	$(CC) $(CFLAGS) -o $(EXECUTABLE) $(CFILES)
 
 clean:
-    rm -f main
+	rm -f $(EXECUTABLE)

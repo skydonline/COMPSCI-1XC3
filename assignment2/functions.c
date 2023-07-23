@@ -70,10 +70,12 @@ bool playWordGuessingGame(const char *randomWord) {
         // Check if word is entirely guessed, if so, return true
         if (strcmp(guessedLetters, randomWord) == 0) {
             return true;
+            clearInputBuffer();     // Clear input buffer
         }
         clearInputBuffer();     // Clear input buffer
         correctGuess = false;   // Reset correctGuess variable to false
     }
+    clearInputBuffer();     // Clear input buffer
     return false;   // Return false if user failed to guess word
 }
 

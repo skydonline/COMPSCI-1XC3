@@ -4,9 +4,8 @@
 #include <stdbool.h> 
 
 #include "constants.h"
-#include "functions.h"
 #include "readFile_randWord.h"
-
+#include "functions.h"
 
 
 int main() {

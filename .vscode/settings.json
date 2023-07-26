@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "functions.h": "c",
+        "constants.h": "c",
+        "readfile_randword.h": "c",
+        "string.h": "c"
+    }
+}
